@@ -12,14 +12,30 @@
 }
 
 #navbar{
-    margin-top: 40px;
+    font-size: 24px;
+
+    margin-top: 60px;
+    padding: 6px 0px 6px 0px;
 
     position: fixed;
 
-    width: 80%;
+    width: 60%;
 
     display: flex;
     justify-content: space-evenly;
 
-    background-color: cyan;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 1px black;
+
+    background-color: rgb(131, 161, 161);
+
 };
+
+#navbar a{
+    transition: transform 1s;
+}
+
+#navbar a:hover{
+    transform: scale(1.25);
+}
