@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css'
+import './components/navbar/Navbar'
+import Navbar from './components/navbar/Navbar';
 
 type TypographyProps =
 {
@@ -43,11 +45,17 @@ function App() {
 
   return (
     <div className="App">
-      <Title size = { randNum }>
-        Hello World
-      </Title>
 
-      <Locked type='text' placeholder='texto...'/>
+      <Navbar/>
+
+      <main>
+        <Title size = { randNum }>
+          Hello World
+        </Title>
+
+        <Locked type='text' placeholder='texto...'/>
+      </main>
+
 
     </div>
   )
