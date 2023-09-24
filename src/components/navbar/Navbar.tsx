@@ -7,8 +7,8 @@ const Bar = () =>
         <div className="center">
             <div id="navbar">
                 <a href="#"><img src="#"></img></a>
-                <a href="#">a</a>
-                <a href="#">b</a>
+                <a href="#">Pokedex</a>
+                <a href="#">Adivinhe</a>
             </div>
         </div>
     )

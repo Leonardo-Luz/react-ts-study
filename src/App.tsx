@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import './components/navbar/Navbar'
 import Navbar from './components/navbar/Navbar';
+import Pokedex from './components/pokedex/pokedex';
 
 type TypographyProps =
 {
@@ -46,7 +47,11 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar/>
+      <header>
+        <Navbar/>
+      </header>
+
+      <div className='margin'/>
 
       <main>
         <Title size = { randNum }>
@@ -54,6 +59,8 @@ function App() {
         </Title>
 
         <Locked type='text' placeholder='texto...'/>
+
+        <Pokedex/>
       </main>
 
 
