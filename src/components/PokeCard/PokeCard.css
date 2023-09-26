@@ -1,0 +1,21 @@
+.card{
+
+
+    padding: 4px;
+    background-color: rgba(197, 166, 107, 0.781);
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transform: translateY(0);
+
+    transition: transform 0.1s ease-out;
+
+    flex-grow: 1;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
