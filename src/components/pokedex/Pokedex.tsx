@@ -11,9 +11,9 @@ const PokeCard = ( { id , name }: PokeCardProps) =>
 {
 
     return (
-        <div>
+        <div className='card'>
             <img src="" alt={name + " image"} />
-            <label>
+            <label className='card-space'>
                 <h3>{name}</h3>
                 <h3>#{id}</h3>
             </label>
@@ -28,13 +28,17 @@ const PokeList = () =>
 {
 
     return (
-        <div id='pokedex-background'>
-            <h2>POKEDEX</h2>
+        <div id='pokedex'>
             <div id="cards-container">
+                <p>POKEDEX LIST</p>
+
                 <PokeCard id={2} name="Charizard"></PokeCard>
                 <PokeCard id={2} name="Charizard"></PokeCard>
                 <PokeCard id={2} name="Charizard"></PokeCard>
                 <PokeCard id={2} name="Charizard"></PokeCard>
+            </div>
+            <div id='search-container'>
+
             </div>
         </div>
     )

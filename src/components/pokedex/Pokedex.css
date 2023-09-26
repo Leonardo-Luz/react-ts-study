@@ -1,24 +1,50 @@
 #cards-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+
     align-items: center;
 
-    width: 20%;
-    height: 350px;
+    width: 100%;
+
+    max-height: 200px;
+    overflow-y: scroll;
+
+    flex-grow: 3;
 }
 
-#pokedex-background{
+#search-container{
+    width: 100px;
+    height: 200px;
+
+    background-color: blue;
+
+    flex-grow: 1;
+}
+
+#pokedex{
     margin-top: 20px;
+    width: 725px;
+    height: 350px;
 
     padding: 12px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: right;
 
     background-color: rgba(0, 0, 0, 0.178);
 
-    border-radius: 20px;
+    border-radius: 8px;
+}
+
+.card{
+    margin: 10px;
+}
+
+.card-space{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
