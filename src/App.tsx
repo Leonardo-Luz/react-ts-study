@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import './components/navbar/Navbar'
 import Navbar from './components/navbar/Navbar';
-import Pokedex from './components/pokedex/pokedex';
+import Pokedex from './components/pokedex/Pokedex';
 
 type TypographyProps =
 {
@@ -25,20 +25,6 @@ const Title = ( { children , size = 3 }: TypographyProps) =>
   )
 };
 
-type LockedProps =
-{
-  placeholder?: string,
-  type: string
-}
-
-const Locked = ( { placeholder = "" , type }: LockedProps ) =>
-{
-  const locker = <input placeholder = { placeholder } type={ type }></input>;
-
-  return(
-    locker
-  )
-};
 
 function App() {
 
@@ -55,10 +41,8 @@ function App() {
 
       <main>
         <Title size = { randNum }>
-          Hello World
+          POKEDEX
         </Title>
-
-        <Locked type='text' placeholder='texto...'/>
 
         <Pokedex/>
       </main>
