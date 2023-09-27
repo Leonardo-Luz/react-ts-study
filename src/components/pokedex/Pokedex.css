@@ -29,7 +29,6 @@
 
 
 #search-result-container{
-
     width: auto;
     height: auto;
 
@@ -37,8 +36,10 @@
 }
 
 #pokedex{
+    margin:  0 auto;
+
     margin-top: 20px;
-    width: 725px;
+    width: 60%;
     height: 350px;
 
     padding: 12px;
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 
     background-color: rgba(0, 0, 0, 0.178);
 

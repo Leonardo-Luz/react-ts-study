@@ -1,4 +1,4 @@
-export const pokemonData = [
+const Pokedata = [
 {"id":"1","species_id":"1","height":"7","weight":"69","base_experience":"64","order":"1","is_default":"1","name":"bulbasaur","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png\",\"animated\":\"http://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif\"}"},
 {"id":"2","species_id":"2","height":"10","weight":"130","base_experience":"142","order":"2","is_default":"1","name":"ivysaur","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/black-white/normal/ivysaur.png\",\"animated\":\"http://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif\"}"},
 {"id":"3","species_id":"3","height":"20","weight":"1000","base_experience":"236","order":"3","is_default":"1","name":"venusaur","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/black-white/normal/venusaur.png\",\"animated\":\"http://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif\"}"},
@@ -720,3 +720,5 @@ export const pokemonData = [
 {"id":"719","species_id":"719","height":"7","weight":"88","base_experience":"270","order":"833","is_default":"1","name":"diancie","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/x-y/normal/diancie.png\"}"},
 {"id":"720","species_id":"720","height":"5","weight":"90","base_experience":"270","order":"835","is_default":"1","name":"hoopa","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/x-y/normal/hoopa.png\"}"},
 {"id":"721","species_id":"721","height":"17","weight":"1950","base_experience":"270","order":"837","is_default":"1","name":"volcanion","sprites":"{\"normal\":\"http://img.pokemondb.net/sprites/x-y/normal/volcanion.png\"}"}]
+
+export default Pokedata;
