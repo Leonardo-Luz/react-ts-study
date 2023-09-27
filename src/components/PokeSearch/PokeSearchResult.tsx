@@ -3,7 +3,7 @@ import './PokeSearchResult.css';
 
 function PokeSearchResult()
 {
-    const SelectedPoke = true;
+    const SelectedPoke = false;
 
     return (
         <div className='poke-result'>
@@ -12,6 +12,7 @@ function PokeSearchResult()
                 (
                     <div id='result-open'>
                         {/* img */}
+                        {/* pokedex width 60% */}
                         <p>nome</p>
                         <p>id</p>
                         <p>peso</p>

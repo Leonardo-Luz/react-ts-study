@@ -2,15 +2,16 @@ import './PokeCard.css'
 
 type PokeCardProps = {
     id: number,
-    name: string
+    name: string,
+    src: string
 };
 
-const PokeCard = ( { id , name }: PokeCardProps) =>
+const PokeCard = ( { id , name , src }: PokeCardProps) =>
 {
 
     return (
         <div className='card'>
-            <img src="" alt={name + " image"} />
+            <img src={src} alt={name + " image"} />
             <label className='card-space'>
                 <h3>{name}</h3>
                 <h3>#{id}</h3>
