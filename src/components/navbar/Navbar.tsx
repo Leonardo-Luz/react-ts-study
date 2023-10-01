@@ -1,4 +1,3 @@
-import React from "react";
 import './Navbar.css';
 
 const Bar = () =>
@@ -6,9 +5,9 @@ const Bar = () =>
     return (
         <div className="center">
             <div id="navbar">
-                <a href="#"><img src="#"></img></a>
-                <a href="#">Pokedex</a>
-                <a href="#">Adivinhe</a>
+                <a href="/"><img src="#"></img></a>
+                <a href="/">Pokedex</a>
+                <a href="/components/GuessMain">Adivinhe</a>
             </div>
         </div>
     )
