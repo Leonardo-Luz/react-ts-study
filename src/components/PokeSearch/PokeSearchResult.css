@@ -12,5 +12,12 @@
     align-items: left;
     flex-direction: column;
 
-    width: 260px;
+    gap: 14px;
+
+    width: 250px;
+}
+
+#result-open img{
+    margin: 0 auto;
+    width: 180px;
 }
