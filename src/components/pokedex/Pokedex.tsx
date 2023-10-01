@@ -1,33 +1,40 @@
 
+import { PokedataProps } from '../../types/PokedexProps';
 import PokeRenderer from '../PokeRenderer/PokeRenderer';
 import PokeSearchResult from '../PokeSearch/PokeSearchResult';
 import SearchBox from '../SearchBox/SearchBox';
 import './Pokedex.css';
 
-const PokeList = () =>
-{
-
-    return (
-        <div id='pokedex'>
-            <div id="search-container">
-                <SearchBox/>
-                <div id="cards-container">
-                    <PokeRenderer/>
-                </div>
-            </div>
-            <div id='search-result-container'>
-                <PokeSearchResult/>
-            </div>
-        </div>
-    )
+type PokedexProps = {
+    searchedPokemon: PokedataProps[],
+    selectedPokemon?: PokedataProps,
+    onPokeCardClick: (pokemonName: string) => void,
+    HandleInputChange: (inputValue: string) => void
 }
 
-function Pokedex()
+const Pokedex = ( { searchedPokemon, selectedPokemon , onPokeCardClick , HandleInputChange }: PokedexProps ) =>
 {
-
+   
     return (
-        <div >
-            <PokeList/>
+        <div id='pokedex'>
+            
+            <div id="search-container">
+                
+                <SearchBox onInputChange={HandleInputChange}/>
+                
+                <div id="cards-container">
+                    
+                    <PokeRenderer data={searchedPokemon} onPokeCardClick={onPokeCardClick}/> 
+                
+                </div>
+            </div>
+            
+            <div id='search-result-container'>
+                
+                <PokeSearchResult selectedPokemon={selectedPokemon}/>
+            
+            </div>
+
         </div>
     )
 }
