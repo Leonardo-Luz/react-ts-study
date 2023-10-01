@@ -1,0 +1,40 @@
+
+body{
+  background-color: rgb(139, 172, 172);
+}
+
+main{
+  /* margin:  0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.margin{
+  margin-bottom: 80px;
+}
+
+#drop-down
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 5px;
+
+  overflow-y: auto;
+  max-height: 160px;
+  width: 245px;
+}
+
+#drop-down label:hover
+{
+  cursor: pointer;
+
+  transform: scale(1.04);
+
+  color: lightgreen;
+  font-weight: bolder;
+}
