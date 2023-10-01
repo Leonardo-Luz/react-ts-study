@@ -4,8 +4,8 @@ import './components/navbar/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
-import PokedexAll from './components/PokedexAll/PokedexAll';
-import GuessMain from './components/GuessMain/GuessMain';
+import PokedexAll from './pages/PokedexAll/PokedexAll';
+import GuessMain from './pages/GuessMain/GuessMain';
 
 const App = () => {    
     return (
