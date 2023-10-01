@@ -1,10 +1,15 @@
 import './SearchBox.css';
 
-function SearchBox()
+type SearchBoxProps = {
+    onInputChange: (inputValue: string) => void;
+}
+
+function SearchBox({ onInputChange }: SearchBoxProps)
 {
     return (
-        <input className='search' type='search' placeholder='pokemon...'>
-            
+        <input onChange={(e) =>{
+            onInputChange(e.target.value);
+        }} id='search' type='search' placeholder='pokemon...'>
         </input>
     )
 }

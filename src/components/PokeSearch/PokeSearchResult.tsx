@@ -1,22 +1,35 @@
+import { PokedataProps } from '../../types/PokedexProps';
 import './PokeSearchResult.css';
 
+type PokeSearchResultProps = {
+    selectedPokemon: PokedataProps | undefined,
+}
 
-function PokeSearchResult()
+const TypeDef = ( type: string[] ) =>
 {
-    const SelectedPoke = false;
+    const types = []
+
+    for(let i = 0; i < type.length; i++)
+    {
+        types.push (<p>Tipo: {type[i]}</p>)
+    }
+
+    return types;
+}
+
+function PokeSearchResult( { selectedPokemon }: PokeSearchResultProps )
+{
 
     return (
         <div className='poke-result'>
             {
-                SelectedPoke ? 
+                selectedPokemon ? 
                 (
                     <div id='result-open'>
-                        {/* img */}
-                        {/* pokedex width 60% */}
-                        <p>nome</p>
-                        <p>id</p>
-                        <p>peso</p>
-                        <p>nivel</p>
+                        <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + selectedPokemon.id + ".png"} />
+                        <p>nome: {selectedPokemon.name.english}</p>
+                        <p>id: {selectedPokemon.id}</p>      
+                        {TypeDef(selectedPokemon.type)}
                     </div>
                 )
                 :

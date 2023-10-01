@@ -1,80 +1,38 @@
 import PokeCard from "../PokeCard/PokeCard";
-import Pokedata  from "../../data/pokedata";
+import { PokedataProps } from "../../types/PokedexProps";
 
-type SpriteScheme = {
-    normal?: string;
-    animated?: string;
+type PokeRendererProps = {
+    data: PokedataProps[],
+    onPokeCardClick: (pokemonName: string) => void
 }
 
-type PokeDataProps = {
-    id?: string,
-    species_id?: string,
-    height?: string,
-    weight?: string,
-    base_experience?: string,
-    order?: string,
-    is_default?: string,
-    name?: string,
-    sprites?: string,
-}
-
-type PatchedPokeDataProps = {
-    id?: string,
-    species_id?: string,
-    height?: string,
-    weight?: string,
-    base_experience?: string,
-    order?: string,
-    is_default?: string,
-    name?: string,
-    sprites?: PokeDataProps,
-}
-
-
-const Unpatch = (pokemons: PokeDataProps[] ) =>
+const PokeImage = ( id: number ) =>
 {
-    const Patched = pokemons.map((pokemon) =>
-    {
-        let ParsedSprite: SpriteScheme = {
-            normal: undefined,
-            animated: undefined
-        };
-
-        try
-        {
-            ParsedSprite = pokemon.sprites && JSON.parse(pokemon.sprites);
-        } catch (e) {
-            console.log("A");
-        }
-
-        const PatchedPokemon: PatchedPokeDataProps = {
-            ...pokemon,
-            sprites: ParsedSprite as PokeDataProps
-        };
-
-        return PatchedPokemon;
-    });
+    return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + id + ".png";
 }
 
-
-
-const Renderer = ( ) =>
+const PokeRenderer = ( { data , onPokeCardClick }: PokeRendererProps ) =>
 {
-    let Pokelist = [];
+    return(
+        data.map((pokemon) => {
 
+            let typeSum = "";
+            pokemon.type.map((type) =>{
+                typeSum += type + " ";
+            })
 
-    for(let i = 0; i < Pokedata.length; i++)
-    {        
-        Pokelist.push(<PokeCard src={} name={Pokedata[i].name} id={Pokedata[i].id} />);
-    }
-
-    return Pokelist;
-}
-
-function PokeRenderer()
-{
-    return (
-        <Renderer/>
+            return (
+                pokemon.name.english && (
+                    <PokeCard
+                        id={pokemon.id}
+                        name={pokemon.name.english}
+                        src={PokeImage(pokemon.id)}
+                        type={typeSum}
+                        onPokeCardClick={onPokeCardClick}
+                    />
+                )
+            )
+        })
     )
 }
 
