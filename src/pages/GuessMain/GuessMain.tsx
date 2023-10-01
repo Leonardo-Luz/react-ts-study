@@ -4,8 +4,8 @@ import './GuessMain.css'
 import data from "../../data/Pokedata.json"
 import { PokedataProps } from '../../types/PokedexProps';
 
-import Guess from '../Guess/Guess';
-import Who from '../Who/Who';
+import Guess from '../../components/Guess/Guess';
+import Who from '../../components/Who/Who';
 
 let randomNum = Math.floor(Math.random() * data.length);
 
