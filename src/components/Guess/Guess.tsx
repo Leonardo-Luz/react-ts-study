@@ -2,14 +2,15 @@ import './Guess.css';
 
 type GuessProps = {
     onInputChange: (inputValue: string) => void;
+    onKeyDown: (e: string) => void;
     clean?: string
 }
 
-const Guess = ( { onInputChange , clean } : GuessProps ) =>
+const Guess = ( { onInputChange, onKeyDown , clean } : GuessProps ) =>
 {
 
     return(
-        <input onChange={(e) =>{ onInputChange(e.target.value); }} type='Search' id='search' placeholder='pokemon...' value={clean}/>
+        <input onKeyDown={(e) => { onKeyDown(e.key) } } onChange={(e) =>{ onInputChange(e.target.value); }} type='Search' id='search' placeholder='pokemon...' value={clean}/>
     )
 }
 
