@@ -17,8 +17,8 @@ const App = () => {
             <div className='margin'/>
 
             <Routes>
-              <Route path='/' element={<PokedexAll />} />
-              <Route path='/components/GuessMain' element={<GuessMain />} />
+              <Route path='/' Component={PokedexAll} />
+              <Route path='/:components/GuessMain' Component={GuessMain} />
             </Routes>
         </div>
       </Router>
