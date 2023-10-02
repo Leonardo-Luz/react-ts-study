@@ -38,3 +38,11 @@ main{
   color: lightgreen;
   font-weight: bolder;
 }
+
+.select
+{
+  transform: scale(1.04);
+
+  color: lightgreen;
+  font-weight: bolder;
+}
